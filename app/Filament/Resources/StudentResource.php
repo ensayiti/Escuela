@@ -53,9 +53,11 @@ class StudentResource extends Resource
                         );
                     }
                 ),
-                TextColumn::make('name'),
+                TextColumn::make('name')
+                    ->searchable(),
                 TextColumn::make('student_id')
-                    ->label('Student ID'),
+                    ->label('Student ID')
+                    ->searchable(),
                 TextColumn::make('address_1'),
                 TextColumn::make('address_2'),
             ])
